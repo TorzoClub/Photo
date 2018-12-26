@@ -1,0 +1,28 @@
+{
+  "name": "Photo",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:TorzoClub/Photo.git",
+  "author": "vec <vec@torzo.club>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "parcel ./App/index.html",
+    "build": "parcel build --public-url './' ./App/index.html"
+  },
+  "dependencies": {
+    "react": ">=15",
+    "react-dom": "^16.6.3",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "parcel-bundler": "^1.11.0",
+    "parcel-plugin-static-files-copy": "^1.2.4",
+    "sass": "^1.15.2"
+  },
+  "staticPath": ["resource"]
+}
