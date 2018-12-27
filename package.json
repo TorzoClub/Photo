@@ -8,6 +8,7 @@
   "private": false,
   "scripts": {
     "dev": "parcel ./App/index.html",
+    "generate": "yarn gulp",
     "build": "parcel build --public-url './' ./App/index.html"
   },
   "dependencies": {
@@ -17,12 +18,20 @@
     "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
+    "arr-ext": "^0.3.0",
     "babel-core": "^6.26.3",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "flat-map": "^1.0.0",
+    "gulp": "^4.0.0",
+    "gulp-scale-images": "^1.1.3",
+    "image-size": "^0.6.3",
+    "js-yaml": "^3.12.0",
     "parcel-bundler": "^1.11.0",
     "parcel-plugin-static-files-copy": "^1.2.4",
     "sass": "^1.15.2"
   },
-  "staticPath": ["resource"]
+  "staticPath": [
+    "resource"
+  ]
 }
