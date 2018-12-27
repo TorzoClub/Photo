@@ -1,6 +1,7 @@
 .cache
 
 dist/
+resource/
 
 node_modules/
 
