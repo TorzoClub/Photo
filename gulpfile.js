@@ -115,6 +115,8 @@ gulp.task('after', async done => {
     })
   }
 
+  gallery_list.sort((a, b) => b.year - a.year)
+
   fs.writeFileSync(
     path.join('resource', 'gallery.json'),
     JSON.stringify(gallery_list, '  ', '  ')
