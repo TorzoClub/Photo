@@ -29,8 +29,15 @@ class Gallery extends React.Component {
     return state
   }
 
-  setPhotoStreamState = () =>
-    this.setState(this.getPhotoStreamState())
+  setPhotoStreamState = () => {
+    const { lastWidth } = this
+    const { innerWidth } = window
+    if (lastWidth !== innerWidth) {
+      this.lastWidth = innerWidth
+      console.warn('setPhotoStreamState')
+      this.setState(this.getPhotoStreamState())
+    }
+  }
 
   componentWillMount() {
     this.setPhotoStreamState()
@@ -46,6 +53,8 @@ class Gallery extends React.Component {
       <div className="gallery">
         <YearLine>{ this.props.year }</YearLine>
         <PhotoStream
+          year={ this.props.year }
+          toDetail={this.props.toDetail}
           column_count={ this.state.column_count }
           total_width={ this.state.gallery_width }
           photos={ this.props.gallery }

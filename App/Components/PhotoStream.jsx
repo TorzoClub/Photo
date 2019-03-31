@@ -58,7 +58,10 @@ export default class PhotoStream extends React.Component {
             {
               column.map(photo => (
                 <ImageBox
+                  photo={photo}
                   { ...photo }
+                  toDetail={this.props.toDetail}
+                  year={ this.props.year }
                   boxWidth={`((${total_width} / ${column_count}) - ${gutter} * 2 + (${gutter} / 2))`}
                   key={ photo.id.toString() } />
               ))

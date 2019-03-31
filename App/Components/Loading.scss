@@ -1,0 +1,32 @@
+.loading {
+  width: 100%;
+  height: 100%;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  .loading-block {
+    position: relative;
+
+    $size: 1.5em;
+
+    width: $size;
+    height: $size;
+
+    .loading-block-line {
+      &.highlight {
+        background-color: grey;
+      }
+      background-color: #CCC;
+      transition: background-color 200ms;
+
+      position: absolute;
+      top: 0;
+      left: calc(50% - 2px / 2);
+      height: calc(50% - #{$size * 0.20});
+      width: 2px;
+      transform-origin: center #{$size / 2};
+    }
+  }
+}
